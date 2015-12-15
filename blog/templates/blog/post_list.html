@@ -6,17 +6,15 @@
         <div>
             <h1><a href="">TAKA ZAU</a></h1>
         </div>
-
-        <div>
-            <p>published: 14.12.2015, 17:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>This is my first blog post. Finally!! I've working on this since last week but somehow i just couldn't get it done. Something must gone wrong. Well, now here i am, writing down all this just because I DID IT!! I found out where goes wrong and fix it. I'll go along with the tutorial and hoping to learn more about coding. Write the code, change the world. Yeyy. Cheers.</p>
-        </div>
-
-        <div>
-            <p>published: 14.12.2015, 17:31</p>
-            <h2><a href="">My second post</a></h2>
-            <p>This is my first blog post. Finally!! I've working on this since last week but somehow i just couldn't get it done. Something must gone wrong. Well, now here i am, writing down all this just because I DID IT!! I found out where goes wrong and fix it. I'll go along with the tutorial and hoping to learn more about coding. Write the code, change the world. Yeyy. Cheers.</p>
-        </div>
+        
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+        {% endfor %}
+       
+       
     </body>
 </html>
