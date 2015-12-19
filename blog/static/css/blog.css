@@ -2,6 +2,9 @@
         background-color: #000000;
         margin-top: 0;
         padding: 100px 20px 120px 50px;
+        background-image: url(../images/image04.jpg);
+        background-size: cover;
+        background-position-y: -200px;
     }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
